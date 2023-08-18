@@ -153,4 +153,3 @@ dependencies:
     - sentencepiece==0.1.99
     - threadpoolctl==3.2.0
     - zipp==3.16.2
-prefix: /home/guoshasha/anaconda3/envs/myPy
