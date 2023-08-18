@@ -33,7 +33,7 @@ Specifically, `WQ/` and `PQ/` contain the following files:
   ```
   * Generate skeletons using a ChatGPT-based skeleton generator, execute:
   ```
-  $ python preprocess.py
+  $ python construct_skeleton_data_by_chatgpt.py --fileName './dataset/WQ' --questionName 'train_question_gold.txt' --skeletonName 'train_skeleton_chatgpt.txt'
   ```
   * Refine skeletons by ChatGPT-based skeleton quality evaluator, execute:
   ```
