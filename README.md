@@ -41,7 +41,7 @@ Specifically, `WQ/` and `PQ/` contain the following files:
   ```
   * Prepare training data for training skeleton generator, execute:
    ```
-   $ python Bart_process.py --input_dir './dataset/WQ' --output_dir './output' --model_name_or_path 'facebook/bart-base'
+   $ python process_data.py --input_dir './dataset/WQ' --output_dir './output' --model_name_or_path 'facebook/bart-base'
    ```
 * To train the skeleton generator, execute:
 ```
