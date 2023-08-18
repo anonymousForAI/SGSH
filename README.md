@@ -37,7 +37,7 @@ Specifically, `WQ/` and `PQ/` contain the following files:
   ```
   * Refine skeletons by ChatGPT-based skeleton quality evaluator, execute:
   ```
-  $ python preprocess.py
+  $ python score_skeleton_by_chatgpt.py --fileName './dataset/WQ' --questionName 'train_question_gold.txt' --skeletonName1 'train_skeleton_rules.txt' --skeletonName2 'train_skeleton_chatgpt.txt' --skeletonScore 'train_skeleton_score_by_chatgpt.txt'
   ```
 * To train the skeleton generator, execute:
 ```
