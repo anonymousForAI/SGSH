@@ -29,7 +29,7 @@ Specifically, `WQ/` and `PQ/` contain the following files:
 
   * Extract skeletons using the rule-based method, execute:
   ```
-  $ python construct_skeleton_data_by_rules.py --fileName './dataset/WQ' --questionName 'train_question_gold.txt' --skeletonName 'train_skeleton_have_help_vb.txt'
+  $ python construct_skeleton_data_by_rules.py --fileName './dataset/WQ' --questionName 'train_question_gold.txt' --skeletonName 'train_skeleton_rules.txt'
   ```
   * Generate skeletons using a ChatGPT-based skeleton generator, execute:
   ```
