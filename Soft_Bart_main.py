@@ -215,10 +215,10 @@ def main():
 
     #### training parameters
     parser.add_argument('--weight_decay', default=1e-5, type=float)
-    parser.add_argument('--batch_size', default=8, type=int)
+    parser.add_argument('--batch_size', default=16, type=int)
     parser.add_argument('--seed', type=int, default=666)
     parser.add_argument('--learning_rate', default=5e-5, type = float)
-    parser.add_argument('--num_train_epochs', default=30, type = int)
+    parser.add_argument('--num_train_epochs', default=20, type = int)
     parser.add_argument('--logging_steps', default=448, type = int)
     parser.add_argument("--max_grad_norm", default=1.0, type=float,
                         help="Max gradient norm.")
@@ -229,7 +229,7 @@ def main():
         logging.info(k+':'+str(v))
     seed_everything(args.seed)
 
-    #### training stage or infereing stage #####
+    #### training stage or inferring stage #####
     if args.isTrain:
         model, tokenizer = train(args)
     else:
