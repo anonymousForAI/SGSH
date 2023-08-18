@@ -10,7 +10,7 @@ $ conda activate SGSH
 ```
 
 ## 2. Dataset
-Our experiments contain two widely-used datasets, i.e., WebQuestions (WQ) and PathQuestions (PQ). The raw data of these datasets are from GitHub [Graph2Seq](https://github.com/hugochan/Graph2Seq-for-KGQG). You can directly use the datasets in our folder 'dataset/'. 
+Our experiments contain two widely-used datasets, i.e., WebQuestions (WQ) and PathQuestions (PQ). The raw data of these datasets are from GitHub [Graph2Seq](https://github.com/hugochan/Graph2Seq-for-KGQG). You can directly use the datasets in our folder `dataset/`. 
 * WQ: `dataset/` contains files for the WQ dataset.
 
 * PQ: `dataset/` contains files for the PQ dataset.
@@ -25,11 +25,11 @@ Specifically, `WQ/` and `PQ/` contain the following files:
 
 ## 1. Fine-tuning Skeleton Generator.
    
-* Prepare the dataset for the skeleton generator by running the following command. Alternatively, You can directly use the built data in 'dataset/WQ/train_skeleton.txt' and 'dataset/WQ/dev_skeleton.txt' (We take the WQ dataset as an example).
+* Prepare the dataset for the skeleton generator by running the following command. Alternatively, You can directly use the built data in `dataset/WQ/train_skeleton.txt` and `dataset/WQ/dev_skeleton.txt` (Note: we take the WQ dataset as an example).
 
   * Extract skeletons using the rule-based method, execute:
   ```
-  $ python preprocess.py
+  $ python construct_skeleton_data_by_rules.py --fileName './dataset/WQ' --questionName 'train_question_gold.txt' --skeletonName 'train_skeleton_have_help_vb.txt'
   ```
   * Generate skeletons using a ChatGPT-based skeleton generator, execute:
   ```
