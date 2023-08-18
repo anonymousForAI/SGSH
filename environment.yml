@@ -1,4 +1,3 @@
-name: myPy
 channels:
   - pytorch
   - defaults
