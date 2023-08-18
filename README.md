@@ -53,7 +53,7 @@ $ python Soft_Bart_main.py --isTrain False --input_dir './dataset/WQ' --output_d
 ```
 ## 2. To infer on GPT-3.5 (e.g., text-davinci-003) to obtain the generated questions, execute:
 ```
-$ python GPT_test_run.py'
+$ python GPT_test_run.py
 ```
 
 
