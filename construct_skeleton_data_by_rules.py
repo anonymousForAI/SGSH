@@ -69,7 +69,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--fileName', default = 'dataset/WQ', required=True)
     parser.add_argument('--questionName', default = 'train_question_gold.txt', required=True)
-    parser.add_argument('--skeletonName', default = 'train_skeleton_have_help_vb.txt', required=True)
+    parser.add_argument('--skeletonName', default = 'train_skeleton_rules.txt', required=True)
     args = parser.parse_args() 
     build_skeleton_data_by_rules(args)
 
