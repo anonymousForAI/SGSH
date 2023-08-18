@@ -39,9 +39,13 @@ Specifically, `WQ/` and `PQ/` contain the following files:
   ```
   $ python score_skeleton_by_chatgpt.py --fileName './dataset/WQ' --questionName 'train_question_gold.txt' --skeletonName1 'train_skeleton_rules.txt' --skeletonName2 'train_skeleton_chatgpt.txt' --skeletonScore 'train_skeleton_score_by_chatgpt.txt'
   ```
+  * Prepare training data for training skeleton generator, execute:
+   ```
+   $ python Bart_process.py --input_dir './dataset/WQ' --output_dir './output' --model_name_or_path 'facebook/bart-base'
+   ```
 * To train the skeleton generator, execute:
 ```
-$ python Soft_Bart_main.py --input_dir './dataset/WQ' --output_dir 'output' --model_name_or_path 'facebook/bart-base' --learning_rate 5e-5 --batch_size 16 --num_train_epochs 20
+$ python Soft_Bart_main.py --input_dir './dataset/WQ' --output_dir './output' --model_name_or_path 'facebook/bart-base' --learning_rate 5e-5 --batch_size 16 --num_train_epochs 20
 ```
 * To infer and acquire the generated skeleton on the test dataset (i.e., './dataset/WQ/predict_test_skeleton.txt'), execute:
 ```
