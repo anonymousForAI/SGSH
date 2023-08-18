@@ -1,8 +1,5 @@
-# SGSH
-The Pytorch implementation of SGSH.
-Requirements
-====
-1. Environments
+# Requirements
+## 1. Environments
 * Create a virtual environment by running the following command:
 ```
 $ conda env create --name=SGSH --file=environment.yml
@@ -11,7 +8,8 @@ $ conda env create --name=SGSH --file=environment.yml
 ```
 $ conda activate SGSH
 ```
-2. Dataset
+
+## 2. Dataset
 Our experiments contain two widely-used datasets, i.e., WebQuestions (WQ) and PathQuestions (PQ). The raw data of these datasets are from GitHub [Graph2Seq](https://github.com/hugochan/Graph2Seq-for-KGQG). You can directly use the datasets in our folder 'dataset/'. 
 * WQ: `dataset/` contains files for the WQ dataset.
 
@@ -20,19 +18,38 @@ Our experiments contain two widely-used datasets, i.e., WebQuestions (WQ) and Pa
 Specifically, `WQ/` and `PQ/` contain the following files:
 * `train.json`, `dev.json`, and `test.json` are the data for train, dev, and test, respectively.
 
-* `train_question_gold.txt`, `val_question_gold.txt`, and `test_question_gold.txt` are the gold questions for train data, dev data, and test data, respectively. 
+* `train_question_gold.txt`, `dev_question_gold.txt`, and `test_question_gold.txt` are the gold questions for train data, dev data, and test data, respectively.
+* `train_skeleton.txt` and `dev_skeleton.txt` are automatically constructed skeleton training datasets for the skeleton generator.
 
-Quick Start for Running
-====
-1. Prepare data.
+# Quick Start for Running
+
+## 1. Fine-tuning Skeleton Generator.
+   
+* Prepare the dataset for the skeleton generator by running the following command. Alternatively, You can directly use the built data in 'dataset/WQ/train_skeleton.txt' and 'dataset/WQ/dev_skeleton.txt' (We take the WQ dataset as an example).
+
+  * Extract skeletons using the rule-based method, execute:
+  ```
+  $ python preprocess.py
+  ```
+  * Generate skeletons using a ChatGPT-based skeleton generator, execute:
+  ```
+  $ python preprocess.py
+  ```
+  * Refine skeletons by ChatGPT-based skeleton quality evaluator, execute:
+  ```
+  $ python preprocess.py
+  ```
+* To train the skeleton generator, execute:
 ```
-$ python preprocess.py -input_dir dataset/WQ --output_dir './output_WQ' --model_name_or_path 'facebook/bart-base'
+$ python train.py'
 ```
-2. To train the example, execute:
+* To infer and acquire the generated skeleton on the test dataset (i.e., './dataset/WQ/predict_test_skeleton.txt'), execute:
 ```
-$ python train_main.py --epoch 30 --input_dir dataset/WQ --output_dir './output_WQ' --learning_rate 5e-5 --batch_size 8 --model_name_or_path 'facebook/bart-base'
+$ python infer.py'
 ```
-3. To infer the example, execute:
+## 2. To infer on GPT-3.5 (e.g., text-davinci-003) to obtain the generated questions, execute:
 ```
-$ python infer.py --input_dir dataset/WQ --output_dir './output_WQ' --batch_size 8 --model_name_or_path 'facebook/bart-base'
+$ python train_main.py'
 ```
+
+
