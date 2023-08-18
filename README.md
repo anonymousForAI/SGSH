@@ -12,7 +12,7 @@ $ conda env create --name=SGSH --file=environment.yml
 $ conda activate SGSH
 ```
 2. Dataset
-Our experiments contain two widely-used datasets, i.e., WebQuestions (WQ) and PathQuestions (PQ). The raw data of these datasets are from GitHub [Graph2Seq] (https://github.com/hugochan/Graph2Seq-for-KGQG). You can directly use the datasets in our folder 'dataset/'. 
+Our experiments contain two widely-used datasets, i.e., WebQuestions (WQ) and PathQuestions (PQ). The raw data of these datasets are from GitHub [Graph2Seq](https://github.com/hugochan/Graph2Seq-for-KGQG). You can directly use the datasets in our folder 'dataset/'. 
 * WQ: `dataset/` contains files for the WQ dataset.
 
 * PQ: `dataset/` contains files for the PQ dataset.
