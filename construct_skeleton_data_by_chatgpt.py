@@ -12,7 +12,7 @@ def generate_response_by_chat(prompt):
   chat_completion = openai.ChatCompletion.create(
   model="gpt-3.5-turbo-0613", 
   messages=[{"role": "system", "content": "You are a powerful syntax analyzer."},
-            {"role": "user", "content": prompt}], ### The third, system role is important and it is a role, eg, You are a powerful assistant.
+            {"role": "user", "content": prompt}], 
   n=1, 
   temperature=0,
   max_tokens=256,
