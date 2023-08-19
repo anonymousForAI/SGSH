@@ -45,7 +45,7 @@ More specifically, `WQ/` and `PQ/` mainly contain the following files:
    ```
 * To train the skeleton generator, execute:
 ```
-$ python Soft_Bart_main.py --input_dir './dataset/WQ' --output_dir './output' --model_name_or_path 'facebook/bart-base' --learning_rate 5e-5 --batch_size 16 --num_train_epochs 20
+$ python skeleton_main.py --input_dir './dataset/WQ' --output_dir './output' --model_name_or_path 'facebook/bart-base' --learning_rate 5e-5 --batch_size 16 --num_train_epochs 20
 ```
 * To infer and acquire the generated skeleton on the test dataset (i.e., './dataset/WQ/predict_test_skeleton.txt'), execute:
 ```
@@ -53,7 +53,7 @@ $ python Soft_Bart_main.py --isTrain False --input_dir './dataset/WQ' --output_d
 ```
 ## 2. To infer on GPT-3.5 (e.g., text-davinci-003) to obtain the generated questions, execute:
 ```
-$ python GPT_test_run.py
+$ python gpt_test_run.py
 ```
 
 
