@@ -10,8 +10,7 @@ from datetime import date
 from utils.misc import MetricLogger, seed_everything, ProgressBar
 from data import DataLoader
 from transformers import BartConfig, BartForConditionalGeneration, BartTokenizer
-import torch.optim as optim
-from torch.optim import AdamW, SGD
+from torch.optim import AdamW
 import logging
 import time
 import random
@@ -20,8 +19,6 @@ from rouge import Rouge
 import nltk
 import numpy as np
 import warnings
-from utils.utilDistinct import ngrams
-from sentence_transformers import SentenceTransformer, util
 from soft_embedding import SoftEmbedding
 
 def train(args):
