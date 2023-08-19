@@ -15,11 +15,11 @@ Our experiments contain two widely-used datasets, i.e., WebQuestions (WQ) and Pa
 
 * PQ: `dataset/` contains files for the PQ dataset.
 
-Specifically, `WQ/` and `PQ/` contain the following files:
+More specifically, `WQ/` and `PQ/` mainly contain the following files:
 * `train.json`, `dev.json`, and `test.json` are the data for train, dev, and test, respectively.
 
-* `train_question_gold.txt`, `dev_question_gold.txt`, and `test_question_gold.txt` are the gold questions for train data, dev data, and test data, respectively.
-* `train_skeleton.txt` and `dev_skeleton.txt` are automatically constructed skeleton training datasets for the skeleton generator.
+* `train_question_gold.txt`, `dev_question_gold.txt`, and `test_question_gold.txt` are the ground-truth questions for train data, dev data, and test data, respectively.
+* `train_skeleton.txt` and `dev_skeleton.txt` are skeleton training data constructed using the automatic training data construction strategy we proposed.
 
 # Quick Start for Running
 
