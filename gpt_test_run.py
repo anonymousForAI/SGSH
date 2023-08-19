@@ -6,7 +6,6 @@ import tiktoken
 import sys
 import argparse
 
-
 openai.api_key="xxxxx"  #### This is openai api_key
 
 @backoff.on_exception(backoff.expo, (openai.error.RateLimitError, openai.error.Timeout, openai.error.APIError, openai.error.ServiceUnavailableError))
