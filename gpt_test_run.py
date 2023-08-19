@@ -16,7 +16,7 @@ def generate_response(prompt):
 	  prompt = prompt,
 	  temperature = 0.7, 
 	  max_tokens = 100,  
-    n = 10,
+          n = 10,
 	  top_p = 1,
 	  frequency_penalty = 0,
 	  presence_penalty = 0
